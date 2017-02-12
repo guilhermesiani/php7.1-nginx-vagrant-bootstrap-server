@@ -1,23 +1,21 @@
 # Provision a Nginx server with PHP7.1 and MySQL^5
-
+```
 $ mkdir DIRECOTY
-
 $ cd DIRECTORY
-
 $ vagrant init
-
 $ vagrant box add ubuntu/trusty64
-
+```
 In the same directory create ur Vagrantfile with this content:
-
+```
 Vagrant.configure(2) do |config|
   	config.vm.box = "ubuntu/trusty64"
 	config.vm.provision :shell, path: "bootstrap.sh"
 	config.vm.network :forwarded_port, guest: 80, host: 8080
 	config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 end
-
+```
 And bootstrap.sh file with the content:
+```
 #!/usr/bin/env bash
 
 apt-get update
@@ -98,7 +96,7 @@ EOF
 # Restart servers
 service nginx restart
 service php7.1-fpm restart
-
-Last on command: vagrant up
+```
+Last on command: ```vagrant up```
 
 After command *vagrant up* or *vagrant provision*, use this url to access your php7 app from vagrant: http://localhost:8080 http://127.0.0.1:8080
