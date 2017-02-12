@@ -1,6 +1,6 @@
 # Provision a Nginx server with PHP7.1 and MySQL^5
 ```
-$ mkdir DIRECOTY
+$ mkdir DIRECTORY
 $ cd DIRECTORY
 $ vagrant init
 $ vagrant box add ubuntu/trusty64
