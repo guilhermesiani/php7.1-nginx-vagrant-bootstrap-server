@@ -100,3 +100,6 @@ service php7.1-fpm restart
 Last one command: ```vagrant up```
 
 After command ```vagrant up``` or ```vagrant provision``` use this url to access your php7 app from vagrant: http://localhost:8080 or http://127.0.0.1:8080
+
+Success!!
+Now you are seeing the Nginx welcome page
