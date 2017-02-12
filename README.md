@@ -5,7 +5,7 @@ $ cd DIRECTORY
 $ vagrant init
 $ vagrant box add ubuntu/trusty64
 ```
-In the same directory create ur Vagrantfile with this content:
+In the same directory create ur ```Vagrantfile``` with this content:
 ```
 Vagrant.configure(2) do |config|
   	config.vm.box = "ubuntu/trusty64"
@@ -14,7 +14,7 @@ Vagrant.configure(2) do |config|
 	config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'"
 end
 ```
-And bootstrap.sh file with the content:
+And ```bootstrap.sh``` file with the content:
 ```
 #!/usr/bin/env bash
 
